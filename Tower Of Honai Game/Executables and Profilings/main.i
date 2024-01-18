@@ -438,9 +438,31 @@ int vswscanf (const wchar_t *__restrict__, const wchar_t * __restrict__, __built
 
 
 # 2 "main.c" 2
-# 15 "main.c"
+# 1 "c:\\mingw\\include\\conio.h" 1 3
+# 24 "c:\\mingw\\include\\conio.h" 3
+ char* __attribute__((__cdecl__)) __attribute__((__nothrow__)) _cgets (char*);
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) _cprintf (const char*, ...);
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) _cputs (const char*);
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) _cscanf (char*, ...);
 
-# 15 "main.c"
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) _getch (void);
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) _getche (void);
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) _kbhit (void);
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) _putch (int);
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) _ungetch (int);
+
+
+
+
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) getch (void);
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) getche (void);
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) kbhit (void);
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) putch (int);
+ int __attribute__((__cdecl__)) __attribute__((__nothrow__)) ungetch (int);
+# 3 "main.c" 2
+# 16 "main.c"
+
+# 16 "main.c"
 void towerOfHanoi(int n, char source, char auxiliary, char destination)
 {
 
@@ -459,7 +481,7 @@ void towerOfHanoi(int n, char source, char auxiliary, char destination)
 
   towerOfHanoi(n - 1, auxiliary, source, destination);
 }
-# 45 "main.c"
+# 46 "main.c"
 int main(int argc, char const *argv[])
 {
 
@@ -474,6 +496,8 @@ int main(int argc, char const *argv[])
 
   towerOfHanoi(numDisks, 'A', 'B', 'C');
 
+
+  getch();
 
   return 0;
 }

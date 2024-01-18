@@ -104,6 +104,7 @@ LFB11:
 	movl	$65, 4(%esp)
 	movl	%eax, (%esp)
 	call	_towerOfHanoi
+	call	_getch
 	movl	$0, %eax
 	leave
 	.cfi_restore 5
@@ -114,3 +115,4 @@ LFE11:
 	.ident	"GCC: (MinGW.org GCC-6.3.0-1) 6.3.0"
 	.def	_printf;	.scl	2;	.type	32;	.endef
 	.def	_scanf;	.scl	2;	.type	32;	.endef
+	.def	_getch;	.scl	2;	.type	32;	.endef
