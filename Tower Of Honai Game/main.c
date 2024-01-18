@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 
 /**
  * Solves the Tower of Hanoi problem for a given number of disks.
@@ -56,6 +57,8 @@ int main(int argc, char const *argv[])
   // Call the towerOfHanoi function to solve and display the steps for the Tower of Hanoi puzzle.
   towerOfHanoi(numDisks, 'A', 'B', 'C');
 
+  // Wait for a key press (specific to some environments, e.g., Turbo C)
+  getch();
   // Return 0 to indicate successful execution.
   return 0;
 }
